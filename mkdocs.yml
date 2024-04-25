@@ -10,6 +10,9 @@ plugins:
         python:
           options:
             docstring_style: sphinx
+nav:
+  - 'quickstart.md'
+  - 'buildroot-setup.md'
 markdown_extensions:
   - markdown_include.include:
       base_path: .
