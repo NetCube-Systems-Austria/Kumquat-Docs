@@ -1,4 +1,4 @@
-# Interfaces
+# Introduction
 
 This section of the documentation contains important information about the interfaces available on the Kumquat. It will take a closer look at the location and usage of these interfaces.
 
