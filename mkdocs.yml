@@ -11,6 +11,7 @@ plugins:
           options:
             docstring_style: sphinx
   - include_dir_to_nav:
+      flat: false
       sort_file: true
       sort_directory: true
 nav:
