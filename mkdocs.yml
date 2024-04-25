@@ -10,10 +10,13 @@ plugins:
         python:
           options:
             docstring_style: sphinx
+  - include_dir_to_nav:
+    sort_file: true
+    sort_directory: true
 nav:
   - 'quickstart.md'
   - 'buildroot-setup.md'
-  - 'interfaces/*'
+  - Interfaces: 'interfaces/'
 markdown_extensions:
   - markdown_include.include:
       base_path: .
