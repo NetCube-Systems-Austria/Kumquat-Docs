@@ -11,8 +11,8 @@ plugins:
           options:
             docstring_style: sphinx
   - include_dir_to_nav:
-    sort_file: true
-    sort_directory: true
+      sort_file: true
+      sort_directory: true
 nav:
   - 'quickstart.md'
   - 'buildroot-setup.md'
