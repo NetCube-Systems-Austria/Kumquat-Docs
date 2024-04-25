@@ -49,11 +49,14 @@ mkdocs==1.6.0
     # via
     #   -r docs/requirements.in
     #   mkdocs-autorefs
+    #   mkdocs-include-dir-to-nav
     #   mkdocstrings
 mkdocs-autorefs==1.0.1
     # via mkdocstrings
 mkdocs-get-deps==0.2.0
     # via mkdocs
+mkdocs-include-dir-to-nav==1.2.0
+    # via -r docs/requirements.in
 mkdocstrings[python]==0.24.3
     # via
     #   -r docs/requirements.in
