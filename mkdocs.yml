@@ -13,7 +13,7 @@ plugins:
 nav:
   - 'quickstart.md'
   - 'buildroot-setup.md'
-  - 'interfaces/'
+  - 'interfaces/*'
 markdown_extensions:
   - markdown_include.include:
       base_path: .
