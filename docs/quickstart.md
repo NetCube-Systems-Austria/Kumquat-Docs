@@ -1,4 +1,4 @@
-# Kumquat Quickstart Guide
+# Quickstart Guide
 
 ## Introduction
 Welcome to the quickstart guide for the Kumquat by NetCube Systems! This guide will walk you through the initial setup process to get your board up and running quickly. Whether you're a novice or an advanced user, follow these steps to start exploring the capabilities of your Kumquat board.

@@ -1,0 +1,3 @@
+# SPI NOR-Flash
+
+To be documented...
