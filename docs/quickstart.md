@@ -5,12 +5,13 @@ Welcome to the quickstart guide for the Kumquat by NetCube Systems! This guide w
 
 ## Prerequisites
 Before you begin, make sure you have the following:
-* Kumquat board
-* Kumquat Flash Adapter
-* USB Type-C cable
-* 12V or 24V power supply (with at least 1A of power)
-* Computer capable of running a serial terminal application
-* Micro-SD card and card reader
+
+- Kumquat board
+- Kumquat Flash Adapter
+- USB Type-C cable
+- 12V or 24V power supply (with at least 1A of power)
+- Computer capable of running a serial terminal application
+- Micro-SD card and card reader
 
 ## Step 1: Prepare the SD Card
 1. Insert the SD card into the card reader of your computer.
@@ -35,10 +36,11 @@ Before you begin, make sure you have the following:
 ## Step 5: Open Serial Terminal
 1. Open a serial terminal application such as PuTTY or GtkTerm on your computer.
 2. Select the newly detected serial port with the following settings: 
-   * Baud rate: 115200
-   * Data bits: 8
-   * Parity: None
-   * Stop bits: 1
+
+    - Baud rate: 115200
+    - Data bits: 8
+    - Parity: None
+    - Stop bits: 1
 
 ## Step 6: Connect Power Supply
 1. Connect the 12V or 24V power supply to the bottom right terminal block of the Kumquat board.
