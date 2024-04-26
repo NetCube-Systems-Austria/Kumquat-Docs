@@ -17,7 +17,7 @@ Before you begin, make sure you have the following:
 1. Insert the SD card into the card reader of your computer.
 
 ## Step 2: Download and Write Buildroot Image
-1. Download the latest example Buildroot image [here](https://git.netcubesystems.at/NetCube-Systems-Austria/kumquat-docs/src/branch/master/builds/netcube_kumquat_defconfig).
+1. Download the latest example Buildroot image [here](https://git.netcubesystems.at/NetCube-Systems-Austria/kumquat-buildroot-releases/releases/tag/demo-build).
 2. Use Balena Etcher (or similar tool) to write the Buildroot image to the SD card.
 
 ## Step 3: Insert SD Card into Kumquat Board
