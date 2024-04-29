@@ -16,15 +16,15 @@ Before you begin, make sure you have the following:
 
 - With the following command, check that the RTC is detected correctly
 
-    ```sh
-    cat /sys/class/rtc/rtc0/device/name
-    ```
+```sh
+cat /sys/class/rtc/rtc0/device/name
+```
 
     It's output should look something like this:
 
-    ```sh
-    ds3232
-    ```
+```sh
+ds3232
+```
 
 - If the RTC is detected you can proceed to the next steps.
 
@@ -32,23 +32,23 @@ Before you begin, make sure you have the following:
 
 - Write the current system time to the RTC:
 
-    ```sh
-    hwclock -w -f /dev/rtc0
-    ```
+```sh
+hwclock -w -f /dev/rtc0
+```
 
 - Read back the time stored in the RTC:
 
-    ```sh
-    hwclock -r -f /dev/rtc0
-    ```
+```sh
+hwclock -r -f /dev/rtc0
+```
 
 ## Testing the Backup Battery
 
 - Now that you have set the RTC, you may power down the board using the following command:
 
-    ```sh
-    poweroff
-    ```
+```sh
+poweroff
+```
 
 - Unplug the power supply from the Kumquat
 
@@ -56,7 +56,7 @@ Before you begin, make sure you have the following:
 
 - Running the following command, should show you the accurately advanced time to when the board was powered off
 
-    ```sh
-    hwclock -r -f /dev/rtc0
-    ```
+```sh
+hwclock -r -f /dev/rtc0
+```
 
