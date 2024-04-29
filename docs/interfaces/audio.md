@@ -26,13 +26,13 @@ Before you begin, make sure you have the following:
 - Use the following command to download an audio file onto the device.
 
 ```sh
-wget https://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther60.wav
+wget http://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther60.wav
 ```
 
 - Enable the audio output using the following command
 
 ```sh
-amixer TODO ...
+amixer -c 0 sset 'Headphone',0 50% on
 ```
 
 - Play the audio file.
@@ -46,7 +46,7 @@ aplay PinkPanther60.wav
 - Enable the microphone input using the following command
 
 ```sh
-amixer TODO ...
+amixer -c 0 sset 'Mic1',0 50% on cap
 ```
 
 - Record the audio file
