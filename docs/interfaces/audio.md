@@ -74,3 +74,5 @@ amixer -c 0 sset 'Headphone',0 50% on
 ```sh
 mpv --demuxer-readahead-secs=5 --demuxer-max-bytes=4M --demuxer-max-back-bytes=2M --audio-buffer=5 http://radio4.cdm-radio.com:8020/stream-mp3-Chill_autodj
 ```
+
+- Checkout [https://dir.xiph.org/](https://dir.xiph.org/) for other stream urls
