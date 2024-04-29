@@ -60,3 +60,17 @@ arecord -d 10 -f cd -t wav recording.wav
 ```sh
 aplay recording.wav
 ```
+
+## Playing Internet Radio
+
+- Enable the audio output using the following command
+
+```sh
+amixer -c 0 sset 'Headphone',0 50% on
+```
+
+- Play a internet stream using mpv
+
+```sh
+mpv --demuxer-readahead-secs=5 --demuxer-max-bytes=4M --demuxer-max-back-bytes=2M --audio-buffer=5 http://radio4.cdm-radio.com:8020/stream-mp3-Chill_autodj
+```
