@@ -2,10 +2,10 @@
 
 The Kumquat offers two 3.5mm TRS jacks to access the audio interface. This document will demonstate how to play and record audio using the alsa-utils.
 
-| Location | Color | Description   | Pinout                                                 |
-| -------- | ----- | ------------- | ------------------------------------------------------ |
-| Xn       | ![Lime](img/interfaces/audio/jack-lime.png) | Headphone Out | ![Headphone Connector Pinout](placeholder_image_link)  |
-| Xn       | ![Pink](img/interfaces/audio/jack-pink.png)  | Microphone In | ![Microphone Connector Pinout](placeholder_image_link) |
+| Location | Color                                              | Description   | Pinout                                                 |
+| -------- | -------------------------------------------------- | ------------- | ------------------------------------------------------ |
+| Xn       | ![Lime](../../img/interfaces/audio/jack-lime.png)  | Headphone Out | ![Headphone Connector Pinout](placeholder_image_link)  |
+| Xn       | ![Pink](../../img/interfaces/audio/jack-pink.png)  | Microphone In | ![Microphone Connector Pinout](placeholder_image_link) |
 
 ![Audio Connector Locations](placeholder_image_link)
 
