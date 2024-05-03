@@ -4,8 +4,8 @@ The Kumquat offers two 3.5mm TRS jacks to access the audio interface. This docum
 
 | Location | Color                                              | Description   | Pinout                                                 |
 | -------- | -------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| Xn       | ![Lime](../../img/interfaces/audio/jack-lime.png)  | Headphone Out | ![Headphone Connector Pinout](placeholder_image_link)  |
-| Xn       | ![Pink](../../img/interfaces/audio/jack-pink.png)  | Microphone In | ![Microphone Connector Pinout](placeholder_image_link) |
+| X8       | ![Lime](../../img/interfaces/audio/jack-lime.png)  | Headphone Out | ![Headphone Connector Pinout](../../img/interfaces/audio/pinout-headphone.png)  |
+| X9       | ![Pink](../../img/interfaces/audio/jack-pink.png)  | Microphone In | ![Microphone Connector Pinout](../../img/interfaces/audio/pinout-microphone.png) |
 
 ![Audio Connector Locations](placeholder_image_link)
 
