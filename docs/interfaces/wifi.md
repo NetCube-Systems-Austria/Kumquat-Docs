@@ -1,3 +1,0 @@
-# WiFi
-
-To be documented...
