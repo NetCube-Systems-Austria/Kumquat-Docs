@@ -1,6 +1,6 @@
 # Serial Console
 
-In this document you fill find a guide on how to use PuTTY or GtkTerm to connect to the Serial Console on the Kumquat.
+In this document you will find a guide on how to use PuTTY or GtkTerm to connect to the Serial Console on the Kumquat.
 
 | Location | Description   |
 | -------- | ------------- |
