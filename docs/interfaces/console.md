@@ -2,6 +2,23 @@
 
 In this document you fill find a guide on how to use PuTTY or GtkTerm to connect to the Serial Console on the Kumquat.
 
+| Location | Description   |
+| -------- | ------------- |
+| Xn       | USB Console   |
+
+![USB Console Connector Location](placeholder_image_link)
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+- USB Type-C Cable
+- Computer running Windows or Linux
+
+## Hardware Setup
+
+Connect the USB Cable to the right USB Type-C connector on the Kumquat, and plug the other end of the cable into your computer
+
 ## Using PuTTY to Connect to a USB-Serial Interface
 
 1. **Download and Install PuTTY**: If you haven't already, download and install PuTTY from the official website: [PuTTY Download Page](https://www.putty.org/).
