@@ -20,7 +20,7 @@ Before you begin, make sure you have the following:
 cat /sys/class/rtc/rtc0/device/name
 ```
 
-    It's output should look something like this:
+It's output should look something like this:
 
 ```sh
 ds3232
