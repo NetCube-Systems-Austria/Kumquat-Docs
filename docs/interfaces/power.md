@@ -1,3 +1,3 @@
 # Power Supply
 
-To be documented...
+To be documented... X1, F1

@@ -1,3 +1,3 @@
-# QWIIC I²C
+# QWIIC
 
 To be documented...
