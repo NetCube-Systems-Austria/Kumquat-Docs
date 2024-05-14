@@ -1,3 +1,3 @@
-# Bluetooth
+# WiFi & Bluetooth
 
 To be documented...
