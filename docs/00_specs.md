@@ -37,21 +37,20 @@ The Kumquat is a versatile embedded system designed for a wide range of applicat
 ## Specifications
 
 - Processor: Allwinner V3s SoC with ARM Cortex-A7 @ 1.2GHz
-- Memory:
-  - DDR2: 64MB with up to 400MHz clock speed
+- Memory: 64MB DDR2 with up to 400MHz clock speed
 - Connectivity:
-  - Ethernet: 10/100 Mbps
-  - USB: USB-C Dual Role, Console over USB-C
-  - Audio: Audio Out, Microphone In
-  - CAN-FD: Isolated CAN-FD
-  - WiFi/Bluetooth: ESP32 module over SDIO
+    - Ethernet: 10/100 Mbps
+    - USB: USB-C Dual Role, Console over USB-C
+    - Audio: Audio Out, Microphone In
+    - CAN-FD: Isolated CAN-FD
+    - WiFi/Bluetooth: ESP32 module over SDIO
 - Storage:
-  - SPI Flash: 8MB for bootloader and user code
-  - I2C EEPROM: For MAC addresses and user data
-  - SDIO Connector: For eMMC or SD-Card
+    - SPI Flash: 8MB for bootloader and user code
+    - I2C EEPROM: For MAC addresses and user data
+    - SDIO Connector: For eMMC or SD-Card
 - IOs and Relays:
-  - IOs: 8x 12/24V IOs, auto-detect logic levels, max 500mA each, total 3A for board
-  - Relays: 4x normally open, max 1A at 30VDC, max 0.3A at 125VAC
+    - IOs: 8x 12/24V IOs, auto-detect logic levels, max 500mA each, total 3A for board
+    - Relays: 4x normally open, max 1A at 30VDC, max 0.3A at 125VAC
 - RTC: With external battery support
 - Expansion: QWIIC connectors for external I2C devices
 
