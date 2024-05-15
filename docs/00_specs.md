@@ -63,6 +63,7 @@ The Kumquat is a versatile embedded system designed for a wide range of applicat
 ## Applications
 
 The Kumquat is suitable for a wide range of applications, including but not limited to:
+
 - Industrial Automation
 - Home Automation
 - IoT (Internet of Things) Projects
