@@ -23,17 +23,20 @@ Before you begin, make sure you have the following:
 ## Step 3: Insert SD Card into Kumquat Board
 1. Eject the SD card from your computer.
 2. Insert the SD card into the "Flash Module Adapter" provided with the Kumquat board.
-3. Insert the adapter into the top right pin header just below the audio connectors on the Kumquat board.
+3. Insert the adapter into the top right pin header (X16) just below the audio connectors on the Kumquat board.
 
 ![Insert Adapter](placeholder_image_link)
 
 ## Step 4: Connect USB Cable
-1. Connect one end of the USB cable to the right port of the Kumquat board.
+1. Connect one end of the USB cable to the right port (X12) of the Kumquat board.
 2. Insert the other end of the USB cable into an available USB port on your computer.
 
 ![Connect USB Cable](placeholder_image_link)
 
 ## Step 5: Open Serial Terminal
+
+See [Serial Console](interfaces/console) for more Information
+
 1. Open a serial terminal application such as PuTTY or GtkTerm on your computer.
 2. Select the newly detected serial port with the following settings: 
 
@@ -43,7 +46,7 @@ Before you begin, make sure you have the following:
     - Stop bits: 1
 
 ## Step 6: Connect Power Supply
-1. Connect the 12V or 24V power supply to the bottom right terminal block of the Kumquat board.
+1. Connect the 12V or 24V power supply to the bottom right terminal block (X1) of the Kumquat board.
 2. Ensure that the positive pin of the power connector is on the right side.
 
 ![Connect Power Supply](placeholder_image_link)
