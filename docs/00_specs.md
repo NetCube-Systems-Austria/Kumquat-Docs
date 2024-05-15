@@ -34,6 +34,12 @@ The Kumquat is a versatile embedded system designed for a wide range of applicat
 ### Expansion
 - QWIIC Connectors: The Kumquat features QWIIC connectors for easy integration with external I2C devices, enabling rapid prototyping and expansion.
 
+## Operating System
+- The Kumquat runs on Buildroot Linux with Mainline Linux kernel and U-Boot as bootloader, providing a stable and customizable operating environment.
+
+## Supported Programming Languages
+- Recommended programming languages for the Kumquat include C, C++, and Python3. However, other languages can also be used based on project requirements and developer preference.
+
 ## Specifications
 
 - Processor: Allwinner V3s SoC with ARM Cortex-A7 @ 1.2GHz
