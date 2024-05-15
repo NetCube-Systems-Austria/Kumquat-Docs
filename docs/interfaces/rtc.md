@@ -2,10 +2,19 @@
 
 The Real Time Clock (RTC) on the Kumquat serves the basic purpose of keeping the time of day. The RTC can keep track of the year, month, date, weekday, hour, minute and seconds. This document will guide you on how to use the RTC on the Kumquat.
 
-| Device Name | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| /dev/rtc0   | DS3232 connected over I2C1 with battery backup on Xn |
-| /dev/rtc1   | built in to SoC, disabled by default                 |
+| Device Name | Description                                           |
+| ----------- | ----------------------------------------------------- |
+| /dev/rtc0   | DS3232 connected over I2C1 with battery backup on X15 |
+| /dev/rtc1   | built in to SoC, disabled by default                  |
+
+## Battery Connector
+
+| Location | Name | Description   |
+| -------- | ---- | ------------- |
+| X15.1    | VBAT | Battery +     |
+| X15.2    | GND  | Battery -     |
+
+![Battery Connector Location](placeholder_image_link)
 
 ## Prerequisites
 Before you begin, make sure you have the following:

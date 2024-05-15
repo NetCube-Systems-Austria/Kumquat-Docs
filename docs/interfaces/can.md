@@ -4,9 +4,19 @@ The Kumquat offers two terminal blocks to access the isolated CAN-FD interface o
 
 SocketCAN provides a set of utilities for working with Controller Area Network (CAN) interfaces on Linux systems. 
 
-| Location | Description   | Pinout                            |
-| -------- | ------------- | --------------------------------- |
-| X2, X3   | CAN Connector | ![CAN Connector Pinout](../../img/interfaces/can/pinout-can.png) |
+## Connector Pinout Description
+
+| Location | Description | 
+| -------- | ----------- |
+| X2.1     | CAN High    |
+| X2.2     | CAN Low     |
+| X2.3     | Shield      |
+
+| Location | Description | 
+| -------- | ----------- |
+| X3.1     | CAN High    |
+| X3.2     | CAN Low     |
+| X3.3     | Shield      |
 
 ![CAN Bus Connector Locations](placeholder_image_link)
 
