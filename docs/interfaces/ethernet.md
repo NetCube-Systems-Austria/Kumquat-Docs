@@ -6,7 +6,7 @@ The Kumquat has a single 10/100 Ethernet interface built in. This document shows
 | -------- | ------------------ |
 | X10      | Ethernet Connector |
 
-![Ethernet Connector Location](placeholder_image_link)
+![Ethernet Connector Location](../../img/interfaces/connectors.png)
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ By default the Kumquat is configured to get an IP-Address using DHCP
 
 To find the IP address of eth0 on Linux, you can use the `ip` command. Open a terminal and type:
 
-```sh
+```
 ip addr show eth0
 ```
 
@@ -35,7 +35,7 @@ This command will display the IP address, subnet mask, and other network informa
 
 To check the link state of eth0, you can again use the `ip` command:
 
-```sh
+```
 ip link show eth0
 ```
 
@@ -47,7 +47,7 @@ To configure a static IP address for eth0 instead of using DHCP, you need to edi
 
 Open the network configuration file in a text editor:
 
-```sh
+```
 nano /etc/network/interfaces
 ```
 
@@ -68,7 +68,7 @@ Save the file and exit the text editor.
 
 After making these changes, you need to restart the networking service to apply the new configuration:
 
-```sh
+```
 /etc/init.d/network restart
 ```
 

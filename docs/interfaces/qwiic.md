@@ -20,7 +20,7 @@ This document provides descriptions of the connections available and instruction
 | X14.3    | I2C_SDA     |
 | X14.4    | I2C_SCL     |
 
-![QWIIC Connector Locations](placeholder_image_link)
+![QWIIC Connector Locations](../../img/interfaces/connectors.png)
 
 ## Connecting the Qwiic Device
 
@@ -30,7 +30,7 @@ Connect your Qwiic device to one of the available Qwiic connectors on the Kumqua
 
 Use the `i2cdetect` command to scan the I2C bus for connected devices. Replace `0` with the appropriate bus number if your I2C bus is different.
 
-```sh
+```
 sudo i2cdetect -y 0
 ```
 
@@ -40,7 +40,7 @@ This command will display a grid showing the addresses of connected devices. The
 
 Once the device is detected, you can use the `i2cget` command to read data from specific registers of the device. Replace `<device-address>` and `<register-address>` with the appropriate values for your device.
 
-```sh
+```
 sudo i2cget -y 0 <device-address> <register-address>
 ```
 
@@ -50,7 +50,7 @@ This command will read a byte of data from the specified register of the device 
 
 You can use the `i2cset` command to write data to specific registers of the device. Replace `<device-address>`, `<register-address>`, and `<data>` with the appropriate values for your device.
 
-```sh
+```
 sudo i2cset -y 0 <device-address> <register-address> <data>
 ```
 

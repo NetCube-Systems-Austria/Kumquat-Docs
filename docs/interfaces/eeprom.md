@@ -10,7 +10,7 @@ This EEPROM contains the MAC-Address of the System in the Read-Only lower 1Kb se
 
 To check if the EEPROM is connected we can let Linux print the name of the loaded driver using the following command:
 
-```sh
+```
 cat /sys/class/i2c-dev/i2c-0/device/0-0050/name
 ```
 
@@ -22,7 +22,7 @@ To write to the EEPROM, you can utilize the kernel's built-in EEPROM driver.
 
 You can write a string to the EEPROM using the `echo` command to write data directly to the appropriate sysfs file. For example, to write the string "Hello, EEPROM!" to the start of an EEPROM connected to I2C bus `i2c-0` at address `0x50`, you can use the following command:
 
-```sh
+```
 echo -n -e "Hello, EEPROM!" > /sys/class/i2c-dev/i2c-0/device/0-0050/eeprom
 ```
 
@@ -32,7 +32,7 @@ The `eeprom` file in the device directory represents the EEPROM, and writing dat
 
 Similarly, you can read a string from the EEPROM using the kernel's built-in EEPROM driver. To read the string, you can simply read the content of the `eeprom` file corresponding to the start of the EEPROM's memory. For example, to read the string stored at the beginning of an EEPROM connected to I2C bus `i2c-0` at address `0x50`, you can use the following command:
 
-```sh
+```
 cat /sys/class/i2c-dev/i2c-0/device/0-0050/eeprom
 ```
 

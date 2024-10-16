@@ -6,7 +6,7 @@ The Kumquat board features a USB On-The-Go (OTG) port via a USB-C connector that
 | -------- | ------------------- |
 | X11      | USB-C OTG Connector |
 
-![USB-OTG Connector Location](placeholder_image_link)
+![USB-OTG Connector Location](../../img/interfaces/connectors.png)
 
 ## Key Features
 

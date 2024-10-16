@@ -18,7 +18,7 @@ SocketCAN provides a set of utilities for working with Controller Area Network (
 | X3.2     | CAN Low     |
 | X3.3     | Shield      |
 
-![CAN Bus Connector Locations](placeholder_image_link)
+![CAN Bus Connector Locations](../../img/interfaces/connectors.png)
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Connect your Computer's CAN-Interface to the other CAN-Connector on the Kumquat.
 
 To configure the bitrate of the CAN interface, use the `ip` command with the `link` option:
 
-```sh
+```
 ip link set can0 type can bitrate 500000
 ```
 
@@ -49,7 +49,7 @@ This command sets the bitrate of the `can0` interface to 500 kbit/s. Adjust the 
 
 To bring the CAN interface up, use the `ip` command:
 
-```sh
+```
 ip link set can0 up
 ```
 
@@ -61,7 +61,7 @@ This command activates the `can0` interface and makes it operational for communi
 
 To check the status of your SocketCAN interface, use the `ip` command:
 
-```sh
+```
 ip -details link show can0
 ```
 
@@ -71,7 +71,7 @@ This command displays detailed information about the `can0` interface, including
 
 To view statistics for the CAN interface, use the `ip` command with the `stat` option:
 
-```sh
+```
 ip -details link show can0 stat
 ```
 
@@ -83,7 +83,7 @@ This command provides statistics such as the number of transmitted and received 
 
 To send CAN frames using SocketCAN, you can use the `cansend` command:
 
-```sh
+```
 cansend can0 123#1122334455667788
 ```
 
@@ -93,7 +93,7 @@ This command sends a CAN frame with ID `123` and data `1122334455667788` on the 
 
 To receive CAN frames, you can use the `candump` command:
 
-```sh
+```
 candump can0
 ```
 
@@ -105,7 +105,7 @@ This command continuously monitors the `can0` interface and prints received CAN 
 
 You can filter CAN frames based on their ID using the `candump` command with filters:
 
-```sh
+```
 candump can0,123:7FF
 ```
 
@@ -115,7 +115,7 @@ This command only displays CAN frames with ID `123` on the `can0` interface.
 
 To analyze CAN traffic using Wireshark, first, capture CAN frames using `candump` and save them to a file:
 
-```sh
+```
 candump can0 > can_traffic.log
 ```
 

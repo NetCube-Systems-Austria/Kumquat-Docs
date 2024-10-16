@@ -4,7 +4,7 @@ The Kumquat is equipped with buttons and LEDs designed to assist users in tasks 
 
 ## Buttons
 
-![Button Locations](placeholder_image_link)
+![Button Locations](../../img/interfaces/buttons-and-leds.png)
 
 | Location | Name   | Description              |
 | -------- | ------ | ------------------------ |
@@ -17,7 +17,7 @@ The user button on the Kumquat is initially configured as a keyboard with only a
 
 To test the functionality of the button, you can use the following command with `evtest`:
 
-```sh
+```
 evtest /dev/input/by-path/platform-gpio-keys-event
 ```
 
@@ -25,7 +25,7 @@ When you press the user button, you should see messages appear for the keydown a
 
 ## LEDs
 
-![LED Locations](placeholder_image_link)
+![LED Locations](../../img/interfaces/buttons-and-leds.png)
 
 | Location | Name      | Description              |
 | -------- | --------- | ------------------------ |
@@ -41,7 +41,7 @@ If your project requires displaying simple status indications, you can reconfigu
 
 To identify the supported triggers for the LED, use the following command with either `green:disk` or `green:heartbeat` for the LED you wish to configure:
 
-```sh
+```
 cat /sys/class/leds/green:heartbeat/trigger
 ```
 
@@ -49,7 +49,7 @@ This command will output a list of supported triggers, with the currently select
 
 To change the trigger, use the following command:
 
-```sh
+```
 echo "mmc1" > /sys/class/leds/green:heartbeat/trigger
 ```
 
@@ -57,7 +57,7 @@ This command will set the heartbeat LED to illuminate when there is activity on 
 
 Additionally, you can set the trigger to `none` and manually control the LED state using the following commands:
 
-```sh
+```
 echo 0 > /sys/class/leds/green:heartbeat/brightness # To turn the LED off
 
 echo 1 > /sys/class/leds/green:heartbeat/brightness # To turn the LED on

@@ -51,6 +51,8 @@ Similar to X6, this connector provides four Digital I/Os along with one Ground (
 | X7.4     | I8         | Q8          | Digital I/O 8 |
 | X7.5     | -          | -           | Ground        |
 
+![IO Connector Locations](../../img/interfaces/connectors.png)
+
 ## Using gpiod's Command-Line Tools
 
 ### Controlling Digital I/Os
@@ -59,7 +61,7 @@ To control the digital I/Os connected to your board, we'll use gpiod's command-l
 
 For example, to set a Digital I/O pin to a specific value:
 
-```sh
+```
 gpioset $(gpiofind Q1)=1
 ```
 
@@ -67,7 +69,7 @@ This command dynamically locates the GPIO pin associated with Digital I/O 1 (Q1)
 
 Similarly, you can set the value of other Digital I/O pins:
 
-```sh
+```
 gpioset $(gpiofind Q2)=0
 ```
 
@@ -79,13 +81,13 @@ To control the relays connected to your board, you can use `gpioset` in combinat
 
 For example, to turn on Relay 1 (connected to Q9), you can use:
 
-```sh
+```
 gpioset $(gpiofind Q9)=1
 ```
 
 To turn it off:
 
-```sh
+```
 gpioset $(gpiofind Q9)=0
 ```
 
@@ -95,7 +97,7 @@ You can also read the state of digital inputs using `gpioget`.
 
 For example, to monitor the state of Digital Input 1 (connected to I1), you can use:
 
-```sh
+```
 gpioget $(gpiofind I1)
 ```
 

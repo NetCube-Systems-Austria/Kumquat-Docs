@@ -9,7 +9,7 @@ The power supply for the Kumquat board is provided through a single terminal blo
 | X1.1     | M (Negative) |
 | X1.2     | L+ (Positive)|
 
-![Power Supply Connector Location](placeholder_image_link)
+![Power Supply Connector Location](../../img/interfaces/connectors.png)
 
 ## Prerequisites
 
@@ -28,13 +28,11 @@ Before connecting the power supply, ensure you have the following:
 
    - Once connected, turn on the power supply. The Kumquat board should begin booting immediately.
 
-![Power Supply Setup](placeholder_image_link)
-
 ## Fuse (F1)
 
 The Kumquat board is equipped with a preinstalled 3 Amp Slow Blow fuse (F1). This fuse protects the board's wiring from short circuits or overloads.
 
-![Fuse Location](placeholder_image_link)
+![Fuse Location](../../img/interfaces/connectors.png)
 
 ### Replacement Information
 If you need to replace the fuse, ensure the replacement matches the specifications of the original. The replacement part can be ordered from most suppliers. 
