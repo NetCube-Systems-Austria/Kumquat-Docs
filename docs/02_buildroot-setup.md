@@ -5,8 +5,10 @@ In this section, we'll guide you through the process of cloning the Git reposito
 
 ## Prerequisites
 Before proceeding, ensure that you have:
+
 - A computer running a Debian-based distribution or Windows Subsystem for Linux 2 (WSL2) with a Debian-based distro.
 - Installed the following packages using apt:
+
 ```shell
 sudo apt update
 sudo apt install -y sed make binutils build-essential diffutils gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc findutils wget git
