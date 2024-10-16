@@ -27,7 +27,7 @@ The USB controller on the Kumquat board is the **Allwinner V3s MUSB** controller
 
 The typical path for the MUSB controller's sysfs interface will look something like:
 
-```sh
+```
 /sys/class/udc/musb-hdrc.1.auto/
 ```
 
@@ -49,7 +49,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
    Load the **g_serial** module, which creates a USB serial device that can communicate with the host PC over the USB-OTG port.
 
-   ```sh
+   ```
    modprobe g_serial
    ```
 
@@ -57,7 +57,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
    After loading the module, the board will create a new serial device that the host PC can detect. You can check the created device by looking at `/dev`:
 
-   ```sh
+   ```
    ls /dev/ttyGS0
    ```
 
@@ -67,7 +67,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
    On the host PC, open a terminal and use a serial communication program such as `screen` or `minicom` to connect to the serial device. For example:
 
-   ```sh
+   ```
    screen /dev/ttyUSB0 115200
    ```
 
@@ -77,7 +77,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
    To stop the USB-serial device and return to the previous configuration, unload the `g_serial` module:
 
-   ```sh
+   ```
    rmmod g_serial
    ```
 
@@ -95,7 +95,7 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
 
    Use the `lsusb` command to verify that the USB stick has been detected by the Kumquat board:
 
-   ```sh
+   ```
    lsusb
    ```
 
@@ -109,19 +109,19 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
 
    First, create a mount point where the USB stick will be mounted:
 
-   ```sh
+   ```
    mkdir /mnt/usb
    ```
 
    Then, find the device name of the USB stick by using the `dmesg` or `lsblk` command:
 
-   ```sh
+   ```
    lsblk
    ```
 
    You should see a block device like `/dev/sda1`. Mount the USB stick to the mount point:
 
-   ```sh
+   ```
    mount /dev/sda1 /mnt/usb
    ```
 
@@ -129,7 +129,7 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
 
    You can now access files on the USB stick from the `/mnt/usb` directory:
 
-   ```sh
+   ```
    ls /mnt/usb
    ```
 
@@ -137,7 +137,7 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
 
    After finishing, unmount the USB stick to safely remove it:
 
-   ```sh
+   ```
    umount /mnt/usb
    ```
 
