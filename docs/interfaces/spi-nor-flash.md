@@ -22,13 +22,13 @@ This setup assigns 512KB to U-Boot, 256KB each for U-Boot environment 1 and 2, a
 
 To verify the presence of the SPI-Nor Flash, you can list the MTD devices using the following command:
 
-```sh
+```
 cat /proc/mtd
 ```
 
 The expected output should resemble the following:
 
-```sh
+```
 mtd0: 00080000 00010000 "u-boot"
 mtd1: 00040000 00010000 "u-boot-env1"
 mtd2: 00040000 00010000 "u-boot-env2"
@@ -46,7 +46,7 @@ Here is an example of how to write a file to the `user` partition:
 1. Prepare the file you want to store in the Flash.
 2. Use `dd` to copy the file to the `user` partition:
 
-```sh
+```
 dd if=mydata.bin of=/dev/mtd3 bs=4096
 ```
 
@@ -56,7 +56,7 @@ This writes the contents of `mydata.bin` to the `user` partition (`mtd3`), using
 
 To read data from the `user` partition, you can use `dd` to copy the contents to a file:
 
-```sh
+```
 dd if=/dev/mtd3 of=readback.bin bs=4096
 ```
 
@@ -64,7 +64,7 @@ This command copies the content of the `user` partition to `readback.bin`. You c
 
 Alternatively, you can display the content directly in the terminal:
 
-```sh
+```
 cat /dev/mtd3
 ```
 

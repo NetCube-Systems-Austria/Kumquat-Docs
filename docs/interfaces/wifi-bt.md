@@ -16,13 +16,13 @@ The Kumquat board uses the standard `NetworkManager` service to manage WiFi conn
 
 First, check if the `espsta0` interface is up and running:
 
-```sh
+```
 nmcli device status
 ```
 
 This should show `espsta0` listed as a WiFi device. If it’s not listed, you may need to bring the interface up manually:
 
-```sh
+```
 ip link set espsta0 up
 ```
 
@@ -30,7 +30,7 @@ ip link set espsta0 up
 
 To scan for nearby WiFi networks:
 
-```sh
+```
 nmcli device wifi list
 ```
 
@@ -40,7 +40,7 @@ This command will output a list of available WiFi networks. Note the SSID of the
 
 To connect to a WiFi network, use the following command:
 
-```sh
+```
 nmcli device wifi connect "<SSID>" password "<password>"
 ```
 
@@ -48,7 +48,7 @@ Replace `<SSID>` with the name of your network and `<password>` with the network
 
 Once connected, you can verify the connection with:
 
-```sh
+```
 nmcli connection show
 ```
 
@@ -58,7 +58,7 @@ This will display the active network connections, including the one established 
 
 After successfully connecting, test the internet connection by pinging a reliable external server:
 
-```sh
+```
 ping 8.8.8.8
 ```
 
@@ -72,7 +72,7 @@ The Kumquat board supports Bluetooth through the **hci0** interface, managed by 
 
 Ensure the Bluetooth interface is up by running:
 
-```sh
+```
 hciconfig hci0 up
 ```
 
@@ -80,7 +80,7 @@ hciconfig hci0 up
 
 To scan for nearby Bluetooth devices, use the following command:
 
-```sh
+```
 hcitool scan
 ```
 
@@ -92,26 +92,26 @@ Once you have the device's MAC address, you can initiate pairing using `bluetoot
 
 1. Start the `bluetoothctl` tool:
 
-    ```sh
+    ```
     bluetoothctl
     ```
 
 2. Enter pairing mode:
 
-    ```sh
+    ```
     agent on
     default-agent
     ```
 
 3. Scan for devices again within `bluetoothctl`:
 
-    ```sh
+    ```
     scan on
     ```
 
 4. Pair with the device by specifying its MAC address:
 
-    ```sh
+    ```
     pair XX:XX:XX:XX:XX:XX
     ```
 
@@ -119,19 +119,19 @@ Once you have the device's MAC address, you can initiate pairing using `bluetoot
 
 5. To connect after pairing, use:
 
-    ```sh
+    ```
     connect XX:XX:XX:XX:XX:XX
     ```
 
 6. Trust the device for automatic connections in the future:
 
-    ```sh
+    ```
     trust XX:XX:XX:XX:XX:XX
     ```
 
 7. Finally, exit `bluetoothctl`:
 
-    ```sh
+    ```
     exit
     ```
 
@@ -139,7 +139,7 @@ Once you have the device's MAC address, you can initiate pairing using `bluetoot
 
 You can verify that the Bluetooth device is connected by running:
 
-```sh
+```
 hciconfig hci0
 ```
 
