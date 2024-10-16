@@ -17,4 +17,4 @@ The Kumquat features an SDIO interface accessible through a 2x10 1.27mm Pin Head
 | X16.17   | RST  | Card Reset   | X16.18   | VCC   | Core Supply (+3.3V) |
 | X16.19   | GND  | Ground       | X16.20   | GND   | Ground              |
 
-![SDIO Connector Location](placeholder_image_link)
+![SDIO Connector Location](../../img/interfaces/connectors.png)

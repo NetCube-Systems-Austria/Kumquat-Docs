@@ -7,7 +7,7 @@ The Kumquat offers two 3.5mm TRS jacks to access the audio interface. This docum
 | X8       | ![Lime](../../img/interfaces/audio/jack-lime.png)  | Headphone Out | ![Headphone Connector Pinout](../../img/interfaces/audio/pinout-headphone.png)  |
 | X9       | ![Pink](../../img/interfaces/audio/jack-pink.png)  | Microphone In | ![Microphone Connector Pinout](../../img/interfaces/audio/pinout-microphone.png) |
 
-![Audio Connector Locations](placeholder_image_link)
+![Audio Connector Locations](../../img/interfaces/connectors.png)
 
 ## Prerequisites
 Before you begin, make sure you have the following:
@@ -25,19 +25,19 @@ Before you begin, make sure you have the following:
 - First copy an audio file onto the device. In this example the wget command, which requires an internet connection, will be used. You can however use other methods to copy an audio file onto the device.
 - Use the following command to download an audio file onto the device.
 
-```sh
+```
 wget http://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther60.wav
 ```
 
 - Enable the audio output using the following command
 
-```sh
+```
 amixer -c 0 sset 'Headphone',0 50% on
 ```
 
 - Play the audio file.
 
-```sh
+```
 aplay PinkPanther60.wav
 ```
 
@@ -45,19 +45,19 @@ aplay PinkPanther60.wav
 
 - Enable the microphone input using the following command
 
-```sh
+```
 amixer -c 0 sset 'Mic1',0 50% on cap
 ```
 
 - Record the audio file
 
-```sh
+```
 arecord -d 10 -f cd -t wav recording.wav
 ```
 
 - Playback the recording using "aplay"
 
-```sh
+```
 aplay recording.wav
 ```
 
@@ -65,13 +65,13 @@ aplay recording.wav
 
 - Enable the audio output using the following command
 
-```sh
+```
 amixer -c 0 sset 'Headphone',0 50% on
 ```
 
 - Play a internet stream using mpv
 
-```sh
+```
 mpv --demuxer-readahead-secs=5 --demuxer-max-bytes=4M --demuxer-max-back-bytes=2M --audio-buffer=5 http://radio4.cdm-radio.com:8020/stream-mp3-Chill_autodj
 ```
 

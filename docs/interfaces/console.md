@@ -6,7 +6,7 @@ In this document you will find a guide on how to use PuTTY or GtkTerm to connect
 | -------- | ------------- |
 | X12      | USB Console   |
 
-![USB Console Connector Location](placeholder_image_link)
+![USB Console Connector Location](../../img/interfaces/connectors.png)
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Connect the USB Cable to the right USB Type-C connector on the Kumquat, and plug
 ## Using GtkTerm to Connect to a USB-Serial Interface
 
 1. **Install GtkTerm**: If GtkTerm is not already installed on your system, you can install it using your package manager. For example, on Ubuntu-based systems, you can install GtkTerm using the following command:
-```sh
+```
 sudo apt-get install gtkterm
 ```
 
