@@ -4,10 +4,10 @@ The power supply for the Kumquat board is provided through a single terminal blo
 
 ## Connector Pinout Description
 
-| Location | Description  |
-| -------- | ------------ |
-| X1.1     | M (Negative) |
-| X1.2     | L+ (Positive)|
+| Location | Description   |
+| -------- | ------------- |
+| X1.1     | L+ (Positive) |
+| X1.2     | M (Negative)  |
 
 ![Power Supply Connector Location](../../img/interfaces/connectors.png)
 
