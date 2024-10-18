@@ -1,5 +1,7 @@
 # NetCube Systems Kumquat
 
+![Kumquat](img/kumquat.png)
+
 Welcome to the NetCube Systems Kumquat Documentation!
 
 The Kumquat is a compact and versatile embedded system powered by the Allwinner V3s SoC. It offers robust connectivity options, extensive I/O capabilities, and support for popular programming languages. With its powerful features and flexible design, the Kumquat is ideal for a wide range of industrial, IoT, and embedded systems applications.
