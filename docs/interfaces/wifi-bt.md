@@ -90,26 +90,26 @@ This will output a list of discoverable devices, showing their MAC addresses and
 
 Once you have the device's MAC address, you can initiate pairing using `bluetoothctl`, a command-line utility to manage Bluetooth devices.
 
-1. Start the `bluetoothctl` tool:
+- Start the `bluetoothctl` tool:
 
     ```
     bluetoothctl
     ```
 
-2. Enter pairing mode:
+- Enter pairing mode:
 
     ```
     agent on
     default-agent
     ```
 
-3. Scan for devices again within `bluetoothctl`:
+- Scan for devices again within `bluetoothctl`:
 
     ```
     scan on
     ```
 
-4. Pair with the device by specifying its MAC address:
+- Pair with the device by specifying its MAC address:
 
     ```
     pair XX:XX:XX:XX:XX:XX
@@ -117,19 +117,19 @@ Once you have the device's MAC address, you can initiate pairing using `bluetoot
 
    Replace `XX:XX:XX:XX:XX:XX` with the actual MAC address of the Bluetooth device.
 
-5. To connect after pairing, use:
+- To connect after pairing, use:
 
     ```
     connect XX:XX:XX:XX:XX:XX
     ```
 
-6. Trust the device for automatic connections in the future:
+- Trust the device for automatic connections in the future:
 
     ```
     trust XX:XX:XX:XX:XX:XX
     ```
 
-7. Finally, exit `bluetoothctl`:
+- Finally, exit `bluetoothctl`:
 
     ```
     exit

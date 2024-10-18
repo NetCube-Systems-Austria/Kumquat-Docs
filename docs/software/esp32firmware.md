@@ -45,13 +45,13 @@ echo "1c10000.mmc" > /sys/bus/platform/drivers/sunxi-mmc/unbind
 
 Next, set the ESP32 to bootloader mode by adjusting the GPIO pins:
 
-1. Set the strapping pins to bootloader mode:
+- Set the strapping pins to bootloader mode:
 
    ```
    gpioset $(gpiofind ESP_nBOOT)=0 && gpioset $(gpiofind ESP_D0)=0
    ```
 
-2. Reset the ESP32 to apply the changes:
+- Reset the ESP32 to apply the changes:
 
    ```
    gpioset $(gpiofind ESP_nRST)=0 && gpioset $(gpiofind ESP_nRST)=1
@@ -63,25 +63,25 @@ At this point, the ESP32 is ready to be flashed.
 
 If you have replaced the ESP32 on the Kumquat board, you'll need to set the flash voltage to **3.3V** by burning the e-fuse.
 
-1. Run the following command during the bootloader mode:
+- Run the following command during the bootloader mode:
 
    ```
    espefuse.py -p /dev/ttyS1 -b 115200 --chip esp32 set_flash_voltage 3.3V
    ```
 
-2. When prompted, type `BURN` in all caps to confirm and permanently burn the fuse. This step cannot be undone.
+- When prompted, type `BURN` in all caps to confirm and permanently burn the fuse. This step cannot be undone.
 
 ### Step 5: Flash the ESP-Hosted-NG Firmware
 
 Once the ESP32 is in bootloader mode, you can flash the **ESP-Hosted-NG** firmware:
 
-1. Navigate to the firmware directory:
+- Navigate to the firmware directory:
 
    ```
    cd /ESP-Hosted-NG_release_v1.0.2/esp32/sdio_only/
    ```
 
-2. Run the flashing command using `esptool.py`:
+- Run the flashing command using `esptool.py`:
 
    ```
    esptool.py -p /dev/ttyS1 -b 115200 --chip esp32 write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 bootloader.bin 0x8000 partition-table.bin 0xd000 ota_data_initial.bin 0x10000 network_adapter.bin
