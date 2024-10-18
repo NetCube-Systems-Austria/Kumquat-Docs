@@ -37,15 +37,15 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
 ### Steps to Configure USB-Serial Device
 
-1. **Connect the Kumquat Board to the Host PC**
+- **Connect the Kumquat Board to the Host PC**
 
    Use a USB Type-C cable to connect the USB-OTG port on the Kumquat board to the host PC.
 
-2. **Enable Device Mode**
+- **Enable Device Mode**
 
    The Linux kernel should automatically detect the connection and switch the Kumquat board to device mode via the TUSB320 controller.
 
-3. **Load the USB Gadget Module**
+- **Load the USB Gadget Module**
 
    Load the **g_serial** module, which creates a USB serial device that can communicate with the host PC over the USB-OTG port.
 
@@ -53,7 +53,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
    modprobe g_serial
    ```
 
-4. **Verify the USB Serial Device**
+- **Verify the USB Serial Device**
 
    After loading the module, the board will create a new serial device that the host PC can detect. You can check the created device by looking at `/dev`:
 
@@ -63,7 +63,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
    The device `/dev/ttyGS0` should appear, representing the USB-serial interface on the Kumquat board.
 
-5. **Connect to the USB-Serial Device from the Host PC**
+- **Connect to the USB-Serial Device from the Host PC**
 
    On the host PC, open a terminal and use a serial communication program such as `screen` or `minicom` to connect to the serial device. For example:
 
@@ -73,7 +73,7 @@ In this example, we will configure the Kumquat board to act as a USB-serial devi
 
    This command connects to the USB-serial device at a baud rate of 115200. You should now be able to send and receive data between the Kumquat board and the host PC.
 
-6. **Stop the USB Serial Device**
+- **Stop the USB Serial Device**
 
    To stop the USB-serial device and return to the previous configuration, unload the `g_serial` module:
 
@@ -87,11 +87,11 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
 
 ### Steps to Connect a USB Stick
 
-1. **Connect the USB Stick to the USB-OTG Port**
+- **Connect the USB Stick to the USB-OTG Port**
 
    Plug your USB stick into the USB-C OTG port using an appropriate adapter, if necessary.
 
-2. **Verify Device Detection**
+- **Verify Device Detection**
 
    Use the `lsusb` command to verify that the USB stick has been detected by the Kumquat board:
 
@@ -105,7 +105,7 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
    Bus 001 Device 002: ID 0781:5581 SanDisk Corp. 
    ```
 
-3. **Mount the USB Stick**
+- **Mount the USB Stick**
 
    First, create a mount point where the USB stick will be mounted:
 
@@ -125,7 +125,7 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
    mount /dev/sda1 /mnt/usb
    ```
 
-4. **Access Files on the USB Stick**
+- **Access Files on the USB Stick**
 
    You can now access files on the USB stick from the `/mnt/usb` directory:
 
@@ -133,7 +133,7 @@ In this example, we will use the Kumquat board as a USB host to connect and acce
    ls /mnt/usb
    ```
 
-5. **Unmount the USB Stick**
+- **Unmount the USB Stick**
 
    After finishing, unmount the USB stick to safely remove it:
 

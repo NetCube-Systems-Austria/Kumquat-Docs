@@ -19,12 +19,12 @@ Before connecting the power supply, ensure you have the following:
 
 ## Hardware Setup
 
-1. **Connect the Power Supply**:
+- **Connect the Power Supply**:
 
    - Connect the positive terminal of the power supply to the `L+` terminal.
    - Connect the negative terminal of the power supply to the `M` terminal.
 
-2. **Power On**:
+- **Power On**:
 
    - Once connected, turn on the power supply. The Kumquat board should begin booting immediately.
 

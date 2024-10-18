@@ -43,8 +43,8 @@ To write data to the `user` partition of the SPI-Nor Flash, you can use standard
 
 Here is an example of how to write a file to the `user` partition:
 
-1. Prepare the file you want to store in the Flash.
-2. Use `dd` to copy the file to the `user` partition:
+- Prepare the file you want to store in the Flash.
+- Use `dd` to copy the file to the `user` partition:
 
 ```
 dd if=mydata.bin of=/dev/mtd3 bs=4096
