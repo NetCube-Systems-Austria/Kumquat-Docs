@@ -123,7 +123,3 @@ Finally, restart the **ESP-Hosted** driver to enable WiFi and Bluetooth services
 ```
 /etc/init.d/S35esphosted start
 ```
-
-## Summary
-
-This guide covers the process of flashing the ESP32 on the Kumquat board. You'll need to stop the driver, disable the SDIO bus, and adjust GPIOs to put the ESP32 into bootloader mode. After flashing the firmware, reset the ESP32 and restore the SDIO bus and driver. If replacing the ESP32, don't forget to set the flash voltage using **espefuse.py**.
