@@ -16,10 +16,11 @@ Before proceeding, ensure you have:
 - Extract the downloaded file:
 
   ```
-  tar -xzvf ESP-Hosted-NG_release_v1.0.2.tgz
+  gzip -d ESP-Hosted-NG_release_v1.0.2.tgz
+  tar -xvf ESP-Hosted-NG_release_v1.0.2.tart
   ```
 
-- The **ESP-Hosted-NG** firmware is located inside `/ESP-Hosted-NG_release_v1.0.2/esp32/sdio_only/`.
+- The **ESP-Hosted-NG** firmware is located inside `ESP-Hosted-NG_release_v1.0.2/esp32/sdio_only/`.
 
 ## Step-by-Step Instructions
 
@@ -78,7 +79,13 @@ Once the ESP32 is in bootloader mode, you can flash the **ESP-Hosted-NG** firmwa
 - Navigate to the firmware directory:
 
    ```
-   cd /ESP-Hosted-NG_release_v1.0.2/esp32/sdio_only/
+   cd ESP-Hosted-NG_release_v1.0.2/esp32/sdio_only/
+   ```
+
+- Erase the flash using `esptool.py`:
+
+   ```
+   esptool.py -p /dev/ttyS1 -b 115200 --chip esp32 erase_flash
    ```
 
 - Run the flashing command using `esptool.py`:
