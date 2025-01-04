@@ -31,11 +31,11 @@ Before starting, ensure you have the following:
 
 1. In the U-Boot bootloader, run the following commands to erase the boot area of the SPI-NOR flash:
 
-   ```
-   sf probe
-   sf erase 0 0x1000
-   reset
-   ```
+```
+sf probe
+sf erase 0 0x1000
+reset
+```
 
 2. The system will reboot. Since the boot area is erased, the SoC will automatically enter **FEL Mode**.
 
@@ -44,15 +44,15 @@ Before starting, ensure you have the following:
 1. Connect the Kumquat board to your host computer using the USB-OTG port.
 2. On the host computer, run the following command to flash the **nor-flash.img** onto the SPI-NOR:
 
-   ```
-   sunxi-fel -p spiflash-write 0 nor-flash.img
-   ```
+```
+sunxi-fel -p spiflash-write 0 nor-flash.img
+```
 
 3. Once flashing is complete, reboot the Kumquat board using:
 
-   ```
-   sunxi-fel wdreset
-   ```
+```
+sunxi-fel wdreset
+```
 
    The board should now boot into the new U-Boot.
 
