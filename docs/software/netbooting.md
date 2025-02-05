@@ -13,22 +13,22 @@ This guide explains how to set up a network boot environment for the Kumquat boa
   - `rootfs.ext4` (Root filesystem image)
 - A **TFTP directory** with the following structure:
 
-  ```
-  tftpd
-  ├── pxelinux.cfg
-  │   └── default-arm-sunxi
-  ├── sun8i-v3s-netcube-kumquat.dtb
-  └── zImage
-  ```
+```
+tftpd
+├── pxelinux.cfg
+│   └── default-arm-sunxi
+├── sun8i-v3s-netcube-kumquat.dtb
+└── zImage
+```
 
 - The **default PXELINUX configuration file** (`default-arm-sunxi`) should contain:
 
-  ```
-  LABEL default
-    kernel zImage
-    fdt sun8i-v3s-netcube-kumquat.dtb
-    append root=/dev/nfs nfsroot=192.168.100.50:/mnt/netboot,tcp,v3 ip=dhcp console=${console} rootfstype=ext4 panic=3 ${mtdparts}
-  ```
+```
+LABEL default
+  kernel zImage
+  fdt sun8i-v3s-netcube-kumquat.dtb
+  append root=/dev/nfs nfsroot=192.168.100.50:/mnt/netboot,tcp,v3 ip=dhcp console=${console} rootfstype=ext4 panic=3 ${mtdparts}
+```
 
 - **NFS export** for the root filesystem.
 
@@ -50,33 +50,33 @@ sudo apt update && sudo apt install -y nfs-kernel-server dnsmasq
 
    Create the mount point for the root filesystem:
 
-   ```bash
-   sudo mkdir -p /mnt/netboot
-   ```
+```bash
+sudo mkdir -p /mnt/netboot
+```
 
 2. **Edit `/etc/exports`**
 
    Add the following line to `/etc/exports`:
 
-   ```
-   /mnt/netboot 192.168.100.0/24(rw,no_subtree_check,no_root_squash)
-   ```
+```
+/mnt/netboot 192.168.100.0/24(rw,no_subtree_check,no_root_squash)
+```
 
 3. **Apply the Export Changes**
 
    Reload the export table:
 
-   ```bash
-   sudo exportfs -ra
-   ```
+```bash
+sudo exportfs -ra
+```
 
 4. **Mount the Root Filesystem**
 
    Mount the Buildroot rootfs image to the export directory:
 
-   ```bash
-   sudo mount -t ext4 output/images/rootfs.ext4 /mnt/netboot
-   ```
+```bash
+sudo mount -t ext4 output/images/rootfs.ext4 /mnt/netboot
+```
 
    > **Note:** Replace `output/images/rootfs.ext4` with the actual path to your rootfs image.
 
@@ -88,31 +88,31 @@ sudo apt update && sudo apt install -y nfs-kernel-server dnsmasq
 
    In your working directory, create a folder named `tftpd` with the following structure:
 
-   ```bash
-   mkdir -p tftpd/pxelinux.cfg
-   ```
+```bash
+mkdir -p tftpd/pxelinux.cfg
+```
 
 2. **Copy the Required Files**
 
    Copy the `zImage` and `sun8i-v3s-netcube-kumquat.dtb` from your Buildroot output:
 
-   ```bash
-   cp output/images/zImage tftpd/
-   cp output/images/sun8i-v3s-netcube-kumquat.dtb tftpd/
-   ```
+```bash
+cp output/images/zImage tftpd/
+cp output/images/sun8i-v3s-netcube-kumquat.dtb tftpd/
+```
 
 3. **Create the PXELINUX Configuration File**
 
    Create a file named `default-arm-sunxi` inside the `tftpd/pxelinux.cfg` directory with the following content:
 
-   ```bash
-   cat <<EOF > tftpd/pxelinux.cfg/default-arm-sunxi
-   LABEL default
-     kernel zImage
-     fdt sun8i-v3s-netcube-kumquat.dtb
-     append root=/dev/nfs nfsroot=192.168.100.50:/mnt/netboot,tcp,v3 ip=dhcp console=\${console} rootfstype=ext4 panic=3 \${mtdparts}
-   EOF
-   ```
+```bash
+cat <<EOF > tftpd/pxelinux.cfg/default-arm-sunxi
+LABEL default
+  kernel zImage
+  fdt sun8i-v3s-netcube-kumquat.dtb
+  append root=/dev/nfs nfsroot=192.168.100.50:/mnt/netboot,tcp,v3 ip=dhcp console=\${console} rootfstype=ext4 panic=3 \${mtdparts}
+EOF
+```
 
    > **Placeholder for configuration image:**
    >
