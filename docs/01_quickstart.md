@@ -16,9 +16,9 @@ Before you begin, make sure you have the following:
 ## Step 1: Prepare the SD Card
 1. Insert the SD card into the card reader of your computer.
 
-## Step 2: Download and Write Buildroot Image
-1. Download the latest example Buildroot image [here](https://git.netcubesystems.at/NetCube-Systems-Austria/kumquat-buildroot-releases/releases/tag/demo-build).
-2. Use Balena Etcher (or similar tool) to write the Buildroot image to the SD card.
+## Step 2: Download and Write Buildroot or Alpine Image
+1. Download the latest example Buildroot image [here](https://git.netcubesystems.at/NetCube-Systems-Austria/kumquat-buildroot-releases/releases/tag/demo-build) or the Alpine Linux image [here](https://github.com/NetCube-Systems-Austria/Kumquat-Alpine-Linux/releases).
+3. Use Balena Etcher (or similar tool) to write the Buildroot image to the SD card.
 
 ## Step 3: Insert SD Card into Kumquat Board
 1. Eject the SD card from your computer.
@@ -53,8 +53,9 @@ See [Serial Console](interfaces/console) for more Information
 
 ## Step 7: Boot up the Kumquat Board
 1. Check the serial console for output.
-2. You should see the start sequence: U-Boot Bootloader, followed by the Buildroot Operating System.
+2. You should see the start sequence: U-Boot Bootloader, followed by the Buildroot or Alpine Operating System.
 3. After a few seconds, you should be prompted with a login. You can log in with the username `root`.
+4. If you installed Alpine Linux, you may now also run `setup-alpine` to do basic system configuration.
 
 ## Conclusion
 Congratulations! You have successfully set up your NetCube Systems Kumquat. Start exploring and experimenting with its capabilities. Refer to the next pages for more advanced usage and customization options.
